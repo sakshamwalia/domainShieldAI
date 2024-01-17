@@ -5,4 +5,5 @@ seaborn
 scikit-learn
 xgboost
 Flask
--e .
+imbalanced-learn
+# -e .
