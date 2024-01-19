@@ -1,15 +1,12 @@
-import logging
-import os
 from datetime import datetime
+import logging
 
-LOG_FILE = f"{datetime.now().strftime('%m_%d_%Y_%H_%M_%S')}.log"
-logs_path = os.path.join(os.getcwd(), "logs", LOG_FILE)
-os.makedirs(logs_path, exist_ok=True)
+class App_Logger:
+    def __init__(self):
+        pass
 
-LOG_FILE_PATH = os.path.join(logs_path, LOG_FILE)
-
-logging.basicConfig(
-    filename = LOG_FILE_PATH,
-    format = "[ %(asctime)s ] %(lineno)d %(name)s - %(levelname)s - %(message)s",
-    level=logging.INFO
-)
+    def log(self, file_object, log_message):
+        self.now = datetime.now()
+        self.date = self.now.date()
+        self.current_time = self.now.strftime("%H:%M:%S")
+        file_object.write(str(self.date) + "/" + str(self.current_time) + "\t\t" + log_message +"\n")

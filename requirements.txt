@@ -7,4 +7,6 @@ xgboost
 Flask
 imbalanced-learn
 optuna
+dataclasses
+sys
 # -e .
