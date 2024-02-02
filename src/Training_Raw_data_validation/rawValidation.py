@@ -14,7 +14,7 @@ class Raw_Data_validation:
              Version: 1.0
              Revisions: None
 
-             """
+    """
 
     def __init__(self,path):
         self.Batch_Directory = path
@@ -60,7 +60,7 @@ class Raw_Data_validation:
         """
                           Method Name: validateColumnLength
                           Description: This function validates the number of columns in the csv files.
-                                       It is should be same as given in the schema file.
+                                       It should be same as given in the schema file.
                                        If not same file is not suitable for processing and thus is moved to Bad Raw Data folder.
                                        If the column number matches, file is kept in Good Raw Data for processing.
                           Output: None
@@ -99,7 +99,7 @@ class Raw_Data_validation:
                                                SUch files are moved to bad raw data.
                                   Output: None
                                   On Failure: Exception
-                              """
+        """
         try:
             f = open("Training_Logs/missingValuesInColumn.txt", 'a+')
             self.logger.log(f,"Missing Values Validation Started!!")

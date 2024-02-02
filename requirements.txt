@@ -8,5 +8,7 @@ Flask
 imbalanced-learn
 optuna
 dataclasses
-sys
+cassandra-driver
+python-dotenv
+flask-cors
 # -e .
