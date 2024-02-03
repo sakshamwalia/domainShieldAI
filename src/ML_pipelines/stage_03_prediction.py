@@ -1,6 +1,6 @@
 import argparse
 from src.logger import App_Logger
-from src.logger import read_params, save_model, find_best_model, load_model
+from src.utils import read_params, save_model, find_best_model, load_model
 from sklearn.preprocessing import StandardScaler
 import numpy as np
 
